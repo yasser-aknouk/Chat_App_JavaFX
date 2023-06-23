@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emsi.ma.clientschats.ConnectionController">
+    <children>
+      <ImageView fitHeight="405.0" fitWidth="796.0">
+         <image>
+            <Image url="@../../../Images/ConnectionBackground.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane prefHeight="403.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <AnchorPane layoutX="345.0" prefHeight="403.0" prefWidth="449.0">
+               <children>
+                  <ListView fx:id="ListUser" layoutY="31.0" prefHeight="116.0" prefWidth="449.0" style="-fx-background-color: 000000;" />
+                  <Text fill="WHITE" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connected User : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Messages : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane fx:id="sp_main" layoutY="177.0" prefHeight="194.0" prefWidth="449.0" style="-fx-background-color: 000000;">
+                     <content>
+                        <ListView fx:id="ListMessage" editable="true" prefHeight="201.0" prefWidth="428.0" style="-fx-background-color: black;" />
+                     </content>
+                  </ScrollPane>
+                  <TextField fx:id="message_txt" layoutY="376.0" prefHeight="25.0" prefWidth="389.0" />
+                  <Button fx:id="sendBtn" layoutX="389.0" layoutY="376.0" mnemonicParsing="false" onAction="#onsendButtonClick" prefHeight="25.0" prefWidth="61.0" text="Send" />
+               </children>
+            </AnchorPane>
+                <Text fill="WHITE" layoutX="42.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host :" AnchorPane.bottomAnchor="247.66666666666669" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="559.9576822916666" AnchorPane.topAnchor="138.0" />
+                <Text fill="WHITE" layoutX="43.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port : " AnchorPane.bottomAnchor="185.33333333333331" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="731.009765625" AnchorPane.topAnchor="203.0" />
+                <Text fill="WHITE" layoutX="74.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connect to the server" AnchorPane.bottomAnchor="305.1490885416667" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="410.85514322916663" AnchorPane.topAnchor="73.576171875">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="PortID" layoutX="38.0" layoutY="229.0" prefHeight="28.0" prefWidth="198.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="560.0" AnchorPane.topAnchor="229.0" />
+                <TextField fx:id="HostID" layoutX="38.0" layoutY="162.0" prefHeight="28.0" prefWidth="198.0" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="560.0" AnchorPane.topAnchor="162.0" />
+                <ButtonBar layoutX="-89.0" layoutY="281.0" prefHeight="43.0" prefWidth="312.0" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="-89.0" AnchorPane.rightAnchor="573.0" AnchorPane.topAnchor="281.0">
+                    <buttons>
+                        <Button minWidth="0.0" mnemonicParsing="false" onAction="#onconnectButtonClick" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: CFD2CF;" text="connect">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font></Button>
+                    </buttons>
+                </ButtonBar>
+                  <Button layoutX="245.0" layoutY="291.0" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: EB1D36;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
