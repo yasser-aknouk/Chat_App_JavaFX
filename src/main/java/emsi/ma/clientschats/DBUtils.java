@@ -33,7 +33,7 @@ public class DBUtils {
         ResultSet resultSet= null;
 
         try{
-            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/chat_app","root","Developpeur2000");
+            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/chat_app","root","yasseraknouk123");
             pscheckUserExists = connection.prepareStatement("SELECT * FROM users WHERE username=?");
             pscheckUserExists.setString(1,username);
             resultSet = pscheckUserExists.executeQuery();
@@ -98,7 +98,7 @@ public class DBUtils {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet= null;
         try{
-            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/chat_app","root","Developpeur2000");
+            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/chat_app","root","yasseraknouk123");
             preparedStatement = connection.prepareStatement("SELECT password FROM users WHERE username = ?");
             preparedStatement.setString(1,username);
             resultSet =preparedStatement.executeQuery();
